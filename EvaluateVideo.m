@@ -119,6 +119,7 @@ if breakage_result_batch_requested
     breakage_results_batch = cell(1,video_batch_size(1));
 end
 
+
 parfor vv = 1:videos_in_batch
     
     this_target_folder = videos{vv,2}; % outside of try statement, because
