@@ -1,0 +1,14 @@
+Input video:
+/Users/hilbert/ivma3_repo/ivma3/Examples/ExampleVideoFiles/Slide3/20111007184150671.avi
+
+
+Analysis parameters:
+scaling_factor = 0.098000
+frames_to_merge = 10.000000
+BW_threshold = 0.300000
+min_length = 0.500000
+rel_length_change = 0.600000
+abs_length_change = 2.500000
+min_presence_time = 2.000000
+min_trace_length = 0.000000
+immotile_frame_removal = 0.000000

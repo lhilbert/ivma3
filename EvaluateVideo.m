@@ -352,10 +352,22 @@ parfor vv = 1:videos_in_batch
                     % image-height,image-width,RGB-channel,frame
                     % Take mean of the three color channels to get gray scale frame
                     % data, also scale from [0,255] to [0,1] range
+                    
+                    % Reinitialize the current_video object
+                    
+                    current_video = VideoReader(videos{vv,1});
+                                    
                     current_gray_frames = ...
-                        mean( ...
-                        read(current_video, ...
-                        [(mm.*frames_to_merge),((mm+1).*frames_to_merge-1)]),3)./255
+                        zeros(height,width,frames_to_merge);
+                    
+                    for frame_kk = 1:frames_to_merge
+                        
+                        gray_frame = squeeze(...
+                            mean(readFrame(current_video),3));
+                    
+                        current_gray_frames(:,:,frame_kk) = gray_frame;
+                        
+                    end
                     
                     %Take the mean brightness of the frames to be merged and assign
                     %it to the merged frame

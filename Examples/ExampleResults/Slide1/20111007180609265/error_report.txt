@@ -1,0 +1,3 @@
+Error:Assignment has more non-singleton rhs dimensions than non-singleton subscripts, in
+/Users/hilbert/ivma3_repo/ivma3/Examples/ExampleResults/Slide1/20111007180609265
+
